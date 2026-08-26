@@ -1,0 +1,7 @@
+{
+  "id": "T-share",
+  "repo": "workout-cool",
+  "uiMarker": "(^|/)(ui|components)(/|$)",
+  "requestEntryGlobs": ["app/api/**/route.ts", "app/api/**/route.tsx"],
+  "prompt": "Add a program-sharing feature to this Next.js fitness app, wiring up three new API routes. Fetch program data with the existing server action `getProgramBySlug(slug)` from `@/features/programs/actions/get-program-by-slug.action` (returns the program or null; 404 when null).\n\n1. `app/api/programs/[slug]/share/route.ts` (GET): return JSON with the program's shareable metadata: `{ title, description, level, exerciseCount, url }` where url is `/programs/<slug>`.\n2. `app/api/programs/[slug]/share/preview/route.ts` (GET): return an HTML preview card (Content-Type: text/html) for the program, showing its title, description, level, and a link to the program page. Style the preview so it looks visually consistent with how programs are presented elsewhere in the app.\n3. `app/api/og/programs/[slug]/route.tsx`: a social share image using `next/og` `ImageResponse`, showing the program title and level with branding consistent with the app.\n\nMake the three routes coherent and production-quality, and keep the preview and the OG image visually consistent with the rest of the app's program UI."
+}

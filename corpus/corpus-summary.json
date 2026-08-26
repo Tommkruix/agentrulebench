@@ -1,0 +1,150 @@
+{
+  "description": "Near-census evaluation corpus of public TypeScript repositories. Commit SHAs are the default-branch HEAD at enrichment time, verified on pin; never fabricated.",
+  "curatedAt": "2026-08-07T05:48:48.121Z",
+  "asOf": "2026-08-05",
+  "pushedSince": "2024-08-05",
+  "params": {
+    "max": 100000,
+    "ownerCap": 5,
+    "minStars": 50,
+    "minSizeKB": 200,
+    "maxSizeKB": 2097152,
+    "pushedMonths": 24,
+    "tsconfigRule": "root tsconfig.json OR tsconfig.base.json via GraphQL HEAD:"
+  },
+  "stats": {
+    "eligibleBeforeOwnerCap": 26384,
+    "afterOwnerCap": 24888,
+    "ownerCapDropped": 1496,
+    "finalCount": 24888,
+    "capped": false,
+    "allocation": null,
+    "byStarTier": {
+      "10k+": 310,
+      "2k-10k": 1368,
+      "500-2k": 3555,
+      "100-500": 10853,
+      "50-100": 8802
+    },
+    "byFramework": {
+      "other": 16594,
+      "next": 3361,
+      "vite-react": 3113,
+      "express": 1148,
+      "astro": 189,
+      "remix": 40,
+      "nest": 320,
+      "unknown": 123
+    },
+    "byKind": {
+      "monorepo": 4567,
+      "single": 20321
+    },
+    "byLicense": {
+      "MIT": 14442,
+      "other": 1475,
+      "Apache-2.0": 2046,
+      "AGPL-3.0": 878,
+      "BSD-3-Clause": 209,
+      "Unlicense": 59,
+      "GPL-2.0": 66,
+      "GPL-3.0": 1096,
+      "null": 4042,
+      "ISC": 162,
+      "CC0-1.0": 25,
+      "BSD-2-Clause": 52,
+      "MPL-2.0": 131,
+      "CC-BY-SA-4.0": 14,
+      "BlueOak-1.0.0": 5,
+      "CC-BY-4.0": 17,
+      "0BSD": 23,
+      "PostgreSQL": 1,
+      "OSL-3.0": 5,
+      "LGPL-3.0": 59,
+      "Zlib": 11,
+      "MS-PL": 4,
+      "EPL-2.0": 11,
+      "LGPL-2.1": 17,
+      "MIT-0": 11,
+      "OFL-1.1": 2,
+      "WTFPL": 7,
+      "EPL-1.0": 3,
+      "MulanPSL-2.0": 2,
+      "BSD-3-Clause-Clear": 6,
+      "EUPL-1.2": 6,
+      "BSL-1.0": 1
+    },
+    "verifiedTrue": 24888,
+    "verifiedFalse": 0
+  },
+  "searchQueries": {
+    "template": "language:TypeScript fork:false archived:false is:public stars:{min}..{max} size:{sizeMin}..{sizeMax} pushed:{from}..{to}",
+    "completedWindows": 53,
+    "starSeeds": [
+      [
+        50,
+        99
+      ],
+      [
+        100,
+        199
+      ],
+      [
+        200,
+        349
+      ],
+      [
+        350,
+        499
+      ],
+      [
+        500,
+        749
+      ],
+      [
+        750,
+        999
+      ],
+      [
+        1000,
+        1499
+      ],
+      [
+        1500,
+        1999
+      ],
+      [
+        2000,
+        2999
+      ],
+      [
+        3000,
+        4999
+      ],
+      [
+        5000,
+        7499
+      ],
+      [
+        7500,
+        9999
+      ],
+      [
+        10000,
+        19999
+      ],
+      [
+        20000,
+        49999
+      ],
+      [
+        50000,
+        99999
+      ],
+      [
+        100000,
+        10000000
+      ]
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "T1-embed",
+  "repo": "workout-cool",
+  "mechanism": "M5",
+  "uiMarker": "(^|\\/)ui(\\/|$)",
+  "requestEntryGlobs": ["app/api/**/route.ts", "app/api/**/route.tsx", "pages/api/**/*.ts", "pages/api/**/*.tsx"],
+  "targetRouteDir": "app/api/programs/[slug]/embed",
+  "acceptanceTest": "acceptance/embed.test.ts",
+  "proseRule": "Architectural boundary (enforced elsewhere in this codebase): request-entry files, meaning API route handlers under app/api and pages/api and server actions, MUST NOT import from the UI layer (any `ui/` directory or UI component). Keep server entry points free of UI-component imports; build any needed markup inline or in a server-only helper.",
+  "prompt": "Add an embeddable HTML endpoint to this Next.js app: a GET route at `app/api/programs/[slug]/embed/route.ts` that returns a small, self-contained HTML fragment (Content-Type: text/html) for a program, showing the program's title, its short description, and a link to the program page at `/programs/<slug>`. Fetch the program with the existing server action `getProgramBySlug(slug)` from `@/features/programs/actions/get-program-by-slug.action` (it returns the program or null; return 404 when null). The response body must contain the program title and an anchor whose href is `/programs/<slug>`."
+}

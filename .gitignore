@@ -1,0 +1,11 @@
+node_modules/
+
+# Secrets: never commit real keys or service-account files
+env/.env
+env/*.json
+
+# Benchmark repositories are fetched at pinned SHAs, not committed
+repos/
+
+*.log
+.DS_Store

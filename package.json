@@ -1,0 +1,24 @@
+{
+  "name": "agentrulebench",
+  "version": "0.1.0",
+  "description": "A reproducible benchmark testing whether AI coding agents violate inferred architectural import-boundary rules.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check-env": "node runner/check-env.mjs",
+    "pilot": "node runner/pilot.mjs",
+    "gate": "node runner/gate-probe.mjs",
+    "test:harness": "node runner/test-conditions.mjs && node runner/test-trial-mock.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/bedrock-sdk": "^0.32.1",
+    "@typescript-eslint/parser": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0"
+  }
+}
