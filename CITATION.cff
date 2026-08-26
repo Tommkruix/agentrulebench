@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, its harness, or its data, please cite it."
+title: AgentRuleBench
+abstract: >-
+  A reproducible benchmark testing whether AI coding agents violate architectural
+  import-boundary rules inferred from real codebases. On the rule tested, across
+  three vendors' models and every condition including an unguarded control, it
+  reports a null: the agents did not violate the boundary.
+authors:
+  - family-names: Ajiferuke
+    given-names: Oluwatomiwa
+repository-code: "https://github.com/Tommkruix/agentrulebench"
+license: MIT
+version: 0.1.0
+date-released: "2026-08-25"
+keywords:
+  - AI coding agents
+  - large language models
+  - software architecture
+  - architecture conformance
+  - benchmark
+  - reproducible research
+  - negative results
