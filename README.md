@@ -6,6 +6,8 @@ On the rule measured here, they did not drift. Across three vendors' agents and 
 
 Read the full write-up in [WRITEUP.md](WRITEUP.md): the premise, the method, the numbers, and a careful account of what the null does and does not mean.
 
+The rule under test was inferred by [archprint](https://github.com/Tommkruix/archprint), an open-source tool (on npm) that mines architecture rules from a repository's real import graph and gates each on statistical evidence. AgentRuleBench and archprint are released together; this repository is the benchmark, archprint is the tool.
+
 ## Repository layout
 
 - `WRITEUP.md`: the full write-up, and the basis for the public post.

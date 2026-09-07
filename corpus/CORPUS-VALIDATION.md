@@ -2,7 +2,7 @@
 
 This is the scale evidence behind two claims in the write-up: that the rule inference runs across a near-census of public TypeScript repositories, and that the fast, no-install scan agrees closely with a slow, dependencies-installed scan. Every number here is computed from the run artifacts. Repository composition and parameters are in `corpus-summary.json`; the full manifest of 24,888 pinned commit SHAs is available on request. The repository-level operational figures below (throughput, deep-install success rate, marker distribution, and the size of the deep-rescanned subset) are summarized from the corpus-run logs, which are not shipped in full.
 
-A note on scope. This corpus mining is descriptive: it characterizes how often two inferred architectural boundaries hold in the wild. It is not the causal benchmark (that is AgentRuleBench, the rest of this repository). It is also the work of a separate, still-in-progress inference tool; it is included here because the write-up cites these numbers, so a reader can check them.
+A note on scope. This corpus mining is descriptive: it characterizes how often two inferred architectural boundaries hold in the wild. It is not the causal benchmark (that is AgentRuleBench, the rest of this repository). It is also the work of archprint (https://github.com/Tommkruix/archprint), an open-source inference tool published on npm; it is included here because the write-up cites these numbers, so a reader can check them.
 
 ## The corpus
 
@@ -58,7 +58,7 @@ Archprint 0.1.0, Node v22.16.0, on a single 8 vCPU / 16.5 GB cloud instance. Gat
 
 ## Limitations
 
-- **Applicability and framework coverage.** Only about 10 percent of the corpus produced a role file the classifier recognized, and that slice is dominated by Next.js-style app directories. The classifier does not yet model Remix, Nuxt, SvelteKit, Astro, Express, NestJS, Fastify, or plain React SPAs with no server layer. Generalization beyond Next.js is open work.
+- **Applicability and framework coverage.** Only about 10 percent of the corpus produced a role file the classifier recognized, and that slice is dominated by Next.js-style app directories. At the time of this run (archprint 0.1.0) the classifier was Next.js-centric. archprint has since added Nest, SvelteKit, Nuxt, Remix, and React/Vue/Svelte/Angular component detection; re-censusing on the newer classifier, and modeling Astro, Express, Fastify, and plain React SPAs with no server layer, is open work.
 - **Rule coverage.** These results rest on two rules. A broader, diverse rule set (layering, dependency direction, public-API boundaries, feature-slice isolation) is needed before any general "mines your architecture" claim.
 - **Deep-install ceiling.** 60.3 percent install success caps how much of the corpus has a full gold-standard comparison; the fast-versus-deep number is honest but rests on that subset.
 - **A `.tsx` request-entry under-count.** At corpus-run time the classifier matched request entries by `route.ts` and `pages/api/*.ts`, so `.tsx` request entries (next/og image routes, which are always `.tsx`) were misclassified as UI components. This slightly under-counts AP-002 applicability and hides any violation in a `.tsx` handler. It was fixed later in the classifier (now matching `route.tsx?` and `pages/api/*.tsx?`); a re-scan would refine the AP-002 figures. It does not affect the fast-versus-deep conclusion, since both modes used the same classifier.
