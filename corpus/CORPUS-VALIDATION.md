@@ -39,7 +39,7 @@ Two read-outs. First, the dominant verdict is SUGGEST (88 percent and 72 percent
 
 ## Fast versus deep fidelity
 
-The applicable subset (2,412 repositories) was re-scanned in deep mode, with each repository's dependencies installed first (always with install scripts disabled), so the deep scan can resolve barrel and alias-hidden imports the fast scan cannot see. Per-app gate-status agreement between the two:
+The applicable subset (2,412 repositories) was re-scanned in deep mode, with each repository's dependencies installed first (always with install scripts disabled), so the deep scan can resolve barrel and alias-hidden imports the fast scan cannot see. Per-app gate-status agreement between the two (a repository can hold several applicable app directories, so the per-app denominators below exceed the 2,412 repositories):
 
 | Boundary | Agreement | Disagreements (all one direction) |
 |---|---|---|

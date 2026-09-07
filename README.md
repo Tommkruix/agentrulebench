@@ -2,7 +2,7 @@
 
 AgentRuleBench tests a widely repeated claim: that AI coding agents drift from the architectural conventions you write in prose (CLAUDE.md, AGENTS.md, GEMINI.md), so you need a deterministic lint rule to hold the boundary.
 
-On the rule measured here, they did not drift. Across three vendors' agents and every condition, including an unguarded control and a deliberately baited task, current agents did not import a UI component into a request-entry file. This repository is the harness, the pre-registration, and the raw run data, so you can rerun it and check the result yourself.
+On the rule measured here, they did not drift. In a pilot across three vendors' agents and all four conditions (from an unguarded control to run-lint-and-fix), and in a pre-registered exploration that added a deliberately baited task and cheaper models, current agents did not import a UI component into a request-entry file. This repository is the harness, the pre-registration, and the raw run data, so you can rerun it and check the result yourself.
 
 Read the full write-up in [WRITEUP.md](WRITEUP.md): the premise, the method, the numbers, and a careful account of what the null does and does not mean.
 

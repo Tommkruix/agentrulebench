@@ -251,3 +251,8 @@ and the exploration, before the study was stopped. See ../WRITEUP.md.
 Implementation note (B0): the B0 condition as run used the same custom lint harness as B with the inferred rule
 omitted (a `--no-config-lookup` ESLint stub), not the repo's pre-existing lint config as Sections 3 and 4
 describe. B versus B0 still isolates the rule from the identical run-lint-and-fix instruction.
+
+Implementation note (pilot): the calibration pilot as run used three models (the two confirmatory agents plus
+Claude) at two replicates each (24 runs), rather than the "both models x three replicates" sketched in Section 7.
+The pilot is calibration only and is never pooled into a confirmatory estimate; adding Claude only widens the
+null (it too produced zero violations across all conditions).
